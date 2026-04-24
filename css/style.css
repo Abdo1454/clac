@@ -1,0 +1,17 @@
+.buttons{
+    width: 330px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: hsl(224.52deg 29.52% 20.59%);
+}
+.btn{
+width: 70px;
+color: #000;
+height: 50px;
+border-radius: 5px;
+font-size: 20px;
+}
