@@ -1,9 +1,30 @@
+body{
+    background: #3b4664;
+}
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        height: 100vh;
+}
+.result{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+}
+.clac-result{
+width: 323px;
+background: #181f32;
+border-radius: 5px;
+height: 70px;
+}
 .buttons{
     width: 330px;
-    height: 250px;
+    height: 330px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 5px;
     justify-content: center;
     gap: 10px;
     background: hsl(224.52deg 29.52% 20.59%);
@@ -11,6 +32,31 @@
 .btn{
 width: 70px;
 color: #000;
+height: 50px;
+border-radius: 5px;
+font-size: 20px;
+}
+.btn-del{
+width: 70px;
+color: #ffffff;
+height: 50px;
+border-radius: 5px;
+font-size: 20px;
+background: #9daedb;
+
+}
+.btn-big{
+    width: 145px;
+background: #9daedb;
+color: #fff;
+height: 50px;
+border-radius: 5px;
+font-size: 20px;
+}
+.btn-big1{
+    width: 145px;
+    background: #f96c5b;
+color: #fff;
 height: 50px;
 border-radius: 5px;
 font-size: 20px;

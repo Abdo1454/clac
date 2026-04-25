@@ -3,26 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <title>calc</title>
   </head>
   <body>
-    <main>
-      <div id="result" class="result"></div>
-      <div class="buttons">
-          <div>
-            <button class="btn" id="7">7</button> <button class="btn" id="8">8</button> <button class="btn" id="9">9</button> <button class="btn" id="Del">DEL</button>
-          </div>
-          <div>
-            <button class="btn" id="4">4</button> <button class="btn" id="5">5</button> <button class="btn" id="6">6</button> <button class="btn" id="+">+</button>
-          </div>
-        <div>
-          <button class="btn" id="1">1</button> <button class="btn" id="2">2</button> <button class="btn" id="3">3</button> <button class="btn" id="-">-</button>
+    <main class="main-content">
+      <div id="result" class="result">
+        <div class="input-clac">
+          <input type="text" id="clac-result" class="clac-result" />
         </div>
-        <div>
-          <button class="btn">.</button> <button class="btn">0</button> <button class="btn">/</button> <button class="btn" id="x">x</button>
+        <div class="buttons">
+          <div>
+            <button class="btn" id="7">7</button>
+            <button class="btn" id="8">8</button>
+            <button class="btn" id="9">9</button>
+            <button class="btn-del" id="Del">DEL</button>
+          </div>
+          <div>
+            <button class="btn" id="4">4</button>
+            <button class="btn" id="5">5</button>
+            <button class="btn" id="6">6</button>
+            <button class="btn" id="+">+</button>
+          </div>
+          <div>
+            <button class="btn" id="1">1</button>
+            <button class="btn" id="2">2</button>
+            <button class="btn" id="3">3</button>
+            <button class="btn" id="-">-</button>
+          </div>
+          <div>
+            <button id="dot" class="btn">.</button> <button class="btn" id="zero">0</button>
+            <button id="divide" class="btn">/</button> <button class="btn" id="x">x</button>
+          </div>
+          <div>
+            <button class="btn-big" id="reset">Reset</button>
+            <button class="btn-big1" id="equal">=</button>
+          </div>
         </div>
       </div>
     </main>
+    <script src="js/main.js"></script>
   </body>
 </html>
