@@ -24,43 +24,84 @@ let reset = document.getElementById("reset");
 let equal = document.getElementById("equal");
 let dot = document.getElementById("dot");
 
-function getCalc() {
+// ------------------ functions ------------------
 
-  // أرقام
-  zero.onclick = () => input.value += "0";
-  one.onclick = () => input.value += "1";
-  two.onclick = () => input.value += "2";
-  three.onclick = () => input.value += "3";
-  four.onclick = () => input.value += "4";
-  five.onclick = () => input.value += "5";
-  six.onclick = () => input.value += "6";
-  seven.onclick = () => input.value += "7";
-  eight.onclick = () => input.value += "8";
-  nine.onclick = () => input.value += "9";
-
-  // عمليات
-  plus.onclick = () => input.value += "+";
-  minus.onclick = () => input.value += "-";
-  multiply.onclick = () => input.value += "*";
-  divide.onclick = () => input.value += "/";
-
-  // نقطة
-  dot.onclick = () => input.value += ".";
-
-  // delete
-  del.onclick = () => input.value = input.value.slice(0, -1);
-
-  // reset
-  reset.onclick = () => input.value = "";
-
-  // =
-  equal.onclick = () => {
-    try {
-      input.value = eval(input.value);
-    } catch {
-      input.value = "Error";
-    }
-  };
+// إضافة رقم
+function addNumber(num) {
+  input.value += num;
 }
 
-getCalc();
+// إضافة عملية مع منع التكرار
+function addOperator(op) {
+  if (input.value === "") return;
+
+  let last = input.value.slice(-1);
+  if ("+-*/".includes(last)) return;
+
+  input.value += op;
+}
+
+// النقطة
+function addDot() {
+  let last = input.value.slice(-1);
+  if (last === ".") return;
+
+  input.value += ".";
+}
+
+// حذف
+function delLast() {
+  input.value = input.value.slice(0, -1);
+}
+
+// ريست
+function clearAll() {
+  input.value = "";
+}
+
+// حساب
+function calculate() {
+  try {
+    let exp = input.value;
+
+    if (exp === "") return;
+
+    // منع انتهاء بـ operator
+    if (/[+\-*/.]$/.test(exp)) {
+      input.value = "Error";
+      return;
+    }
+    input.value="";
+    input.value = eval(exp);
+  } catch {
+    input.value = "Error";
+  }
+}
+
+// ------------------ events ------------------
+
+// أرقام
+zero.onclick = () => addNumber("0");
+one.onclick = () => addNumber("1");
+two.onclick = () => addNumber("2");
+three.onclick = () => addNumber("3");
+four.onclick = () => addNumber("4");
+five.onclick = () => addNumber("5");
+six.onclick = () => addNumber("6");
+seven.onclick = () => addNumber("7");
+eight.onclick = () => addNumber("8");
+nine.onclick = () => addNumber("9");
+
+// عمليات
+plus.onclick = () => addOperator("+");
+minus.onclick = () => addOperator("-");
+multiply.onclick = () => addOperator("*");
+divide.onclick = () => addOperator("/");
+
+// نقطة
+dot.onclick = addDot;
+
+// أزرار خاصة
+del.onclick = delLast;
+reset.onclick = clearAll;
+equal.onclick = calculate;
