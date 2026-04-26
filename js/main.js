@@ -16,7 +16,7 @@ let nine = document.getElementById("9");
 let plus = document.getElementById("+");
 let minus = document.getElementById("-");
 let multiply = document.getElementById("x");
-let divide = document.getElementById("/");
+let divide = document.getElementById("divide");
 
 // أزرار خاصة
 let del = document.getElementById("Del");
@@ -43,12 +43,13 @@ function addOperator(op) {
 
 // النقطة
 function addDot() {
-  let last = input.value.slice(-1);
-  if (last === ".") return;
+  let parts = input.value.split(/[\+\-\*\/]/);
+  let lastPart = parts[parts.length - 1];
+
+  if (lastPart.includes(".")) return;
 
   input.value += ".";
 }
-
 // حذف
 function delLast() {
   input.value = input.value.slice(0, -1);
@@ -91,7 +92,7 @@ six.onclick = () => addNumber("6");
 seven.onclick = () => addNumber("7");
 eight.onclick = () => addNumber("8");
 nine.onclick = () => addNumber("9");
-
+dot.onclick = () =>addNumber(".");
 // عمليات
 plus.onclick = () => addOperator("+");
 minus.onclick = () => addOperator("-");
@@ -101,7 +102,6 @@ divide.onclick = () => addOperator("/");
 // نقطة
 dot.onclick = addDot;
 
-// أزرار خاصة
-del.onclick = delLast;
-reset.onclick = clearAll;
-equal.onclick = calculate;
+del.addEventListener("click", delLast);
+reset.addEventListener("click", clearAll);
+equal.addEventListener("click", calculate);

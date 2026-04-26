@@ -15,8 +15,10 @@ body{
 .clac-result{
 width: 323px;
 background: #181f32;
+color: #fff;
+font-size: 30px;
 border-radius: 5px;
-height: 70px;
+height: 90px;
 }
 .buttons{
     width: 330px;
