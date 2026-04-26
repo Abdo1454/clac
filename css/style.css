@@ -1,84 +1,107 @@
-body{
-    background: #3b4664;
+body {
+  background: #3b4664;
 }
-.main-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-        height: 100vh;
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
 }
 /* theme */
-.theme{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 120px;
+.theme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 180px;
+  color: #fff;
 }
+/* .theme h1{
+    display: flex;
+    justify-content: flex-start;
+} */
 /* control */
-.control{
+.btns-control {
+  display: flex;
+  gap: 15px;
+  /* padding-bottom: 10px; */
+}
+.dash-control {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.control {
+  background: #b5bbcb;
+  width: 70px;
+  height: 15px;
+  border-radius: 20px;
+  position: relative;
+}
 
+.active {
+  background: #f53c28;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateY(-15px);
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
 }
-.active{
-        background: #b5bbcb;
-    width: 40px;
-    height: 20px;
-    font-size: 20px;
-    color: #f80101;
+.result {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
 }
-.result{
-    display: flex;
-    gap: 15px;
-    flex-direction: column;
+.clac-result {
+  width: 323px;
+  background: #181f32;
+  color: #fff;
+  font-size: 30px;
+  border-radius: 5px;
+  height: 90px;
 }
-.clac-result{
-width: 323px;
-background: #181f32;
-color: #fff;
-font-size: 30px;
-border-radius: 5px;
-height: 90px;
+.buttons {
+  width: 330px;
+  height: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  justify-content: center;
+  gap: 10px;
+  background: hsl(224.52deg 29.52% 20.59%);
 }
-.buttons{
-    width: 330px;
-    height: 330px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 5px;
-    justify-content: center;
-    gap: 10px;
-    background: hsl(224.52deg 29.52% 20.59%);
+.btn {
+  width: 70px;
+  color: #000;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
 }
-.btn{
-width: 70px;
-color: #000;
-height: 50px;
-border-radius: 5px;
-font-size: 20px;
+.btn-del {
+  width: 70px;
+  color: #ffffff;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
+  background: #9daedb;
 }
-.btn-del{
-width: 70px;
-color: #ffffff;
-height: 50px;
-border-radius: 5px;
-font-size: 20px;
-background: #9daedb;
-
+.btn-big {
+  width: 145px;
+  background: #9daedb;
+  color: #fff;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
 }
-.btn-big{
-    width: 145px;
-background: #9daedb;
-color: #fff;
-height: 50px;
-border-radius: 5px;
-font-size: 20px;
-}
-.btn-big1{
-    width: 145px;
-    background: #f96c5b;
-color: #fff;
-height: 50px;
-border-radius: 5px;
-font-size: 20px;
+.btn-big1 {
+  width: 145px;
+  background: #f96c5b;
+  color: #fff;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 20px;
 }
