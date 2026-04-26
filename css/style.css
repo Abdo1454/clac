@@ -5,7 +5,26 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
         height: 100vh;
+}
+/* theme */
+.theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 120px;
+}
+/* control */
+.control{
+
+}
+.active{
+        background: #b5bbcb;
+    width: 40px;
+    height: 20px;
+    font-size: 20px;
+    color: #f80101;
 }
 .result{
     display: flex;
