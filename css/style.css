@@ -1,6 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #3b4664;
+  font-family: Arial, sans-serif;
 }
+
 .main-content {
   display: flex;
   justify-content: center;
@@ -8,48 +16,75 @@ body {
   flex-direction: column;
   height: 100vh;
 }
+
 /* theme */
 .theme {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 180px;
+  gap: 140px;
   color: #fff;
 }
-/* .theme h1{
-    display: flex;
-    justify-content: flex-start;
-} */
-/* control */
-.btns-control {
-  display: flex;
-  gap: 15px;
-  /* padding-bottom: 10px; */
-}
+
 .dash-control {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-}
-.control {
-  background: #b5bbcb;
-  width: 70px;
-  height: 15px;
-  border-radius: 20px;
-  position: relative;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
+/* الأرقام فوق */
+.btns-control {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 40px;
+  font-size: 14px;
+}
+.btns-control p{
+  cursor: pointer;
+}
+/* theme-current */
+.theme-current {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* control bar */
+.control {
+  background: #b5bbcb;
+  width: 60px;
+  height: 20px;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* الدائرة */
 .active {
   background: #f53c28;
-  width: 10px;
-  height: 10px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   position: absolute;
-  transform: translateY(-15px);
-  top: 2px;
-  left: 2px;
-  transition: 0.3s;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: 0.3s ease;
 }
+
+/* positions (3 themes) */
+.active.move-2 {
+  left: 23px;
+}
+
+.active.move-3 {
+  left: 43px;
+}
+/* .control p:hover{
+  cursor: pointer;
+} */
 .result {
   display: flex;
   gap: 15px;
