@@ -1,5 +1,5 @@
-:root{
-    --bg: #3b4664;
+:root {
+  --bg: #3b4664;
   --screen: #181f32;
   --keys: hsl(224, 30%, 21%);
   --text: #ffffff;
@@ -9,79 +9,87 @@
 }
 
 /* Theme 2 */
-body.theme-2{
-      --bg: #e6e6e6;
+body.theme-2 {
+  --bg: #e6e6e6;
   --screen: #d3cdcd;
   --keys: #e5e4e0;
   --text: #36352d;
-  --main-btn: #36352d;
+  --main-btn: #ffffff;
   --equal: #fe8a37;
   --del-reset: #62b5bd;
 }
+
 /* Theme 3 */
-body.theme-3{
+body.theme-3 {
   --bg: hsl(268, 75%, 9%);
   --screen: #1e0736;
   --keys: #331c4d;
-  --text: #fceaff;
+  --text: hsl(51.53deg 91.71% 62.16%);
   --main-btn: #6c34ac;
   --equal: #fe8a37;
   --del-reset: #62b5bd;
 }
-*{
+
+/* RESET */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BODY */
 body {
-  background: #3b4664;
+  background: var(--bg);
   font-family: Arial, sans-serif;
+  transition: 0.3s ease;
 }
 
+/* LAYOUT */
 .main-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* gap: 30px; */
   flex-direction: column;
   height: 100vh;
 }
-
-/* theme */
+h1{
+  color: var(--text);
+}
+/* THEME HEADER */
 .theme {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 140px;
-  color: #fff;
+  color: var(--text);
 }
 
 .dash-control {
-  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 20px;
 }
 
-/* الأرقام فوق */
 .btns-control {
   display: flex;
   justify-content: space-around;
   margin-left: 40px;
   font-size: 14px;
 }
-.btns-control p{
+
+.btns-control p {
   cursor: pointer;
 }
-/* theme-current */
+
+/* TOGGLE */
 .theme-current {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* control bar */
 .control {
   background: #b5bbcb;
   width: 60px;
@@ -91,9 +99,8 @@ body {
   cursor: pointer;
 }
 
-/* الدائرة */
 .active {
-  background: #f53c28;
+  background: var(--equal);
   width: 14px;
   height: 14px;
   border-radius: 50%;
@@ -104,69 +111,79 @@ body {
   transition: 0.3s ease;
 }
 
-/* positions (3 themes) */
-.active.move-2 {
-  left: 23px;
-}
+.active.move-2 { left: 23px; }
+.active.move-3 { left: 43px; }
 
-.active.move-3 {
-  left: 43px;
-}
-/* .control p:hover{
-  cursor: pointer;
-} */
-.result {
+/* SCREEN */
+.result{
   display: flex;
-  gap: 15px;
   flex-direction: column;
+  gap: 20px;
 }
 .clac-result {
-  width: 323px;
-  background: #181f32;
-  color: #fff;
+  width: 330px;
+  height: 90px;
+  background: var(--screen);
+  color: var(--text);
   font-size: 30px;
   border-radius: 5px;
-  height: 90px;
+  border: none;
+  text-align: right;
+  padding: 10px;
 }
+
+/* BUTTONS */
 .buttons {
   width: 330px;
-  height: 330px;
+  height: auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 5px;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 10px;
-  background: hsl(224.52deg 29.52% 20.59%);
+  justify-content: center;
+  padding: 15px;
+  border-radius: 5px;
+  background: var(--keys);
 }
+
+/* BUTTON */
 .btn {
   width: 70px;
-  color: #000;
   height: 50px;
   border-radius: 5px;
   font-size: 20px;
+  border: none;
+  cursor: pointer;
+  background: var(--main-btn);
+  color: var(--text);
 }
+
 .btn-del {
-  width: 70px;
-  color: #ffffff;
+  background: var(--del-reset);
+  color: #fff;
+    width: 70px;
   height: 50px;
   border-radius: 5px;
   font-size: 20px;
-  background: #9daedb;
+   border: none;
+  cursor: pointer;
 }
+
 .btn-big {
   width: 145px;
-  background: #9daedb;
-  color: #fff;
   height: 50px;
   border-radius: 5px;
-  font-size: 20px;
+  border: none;
+  background: var(--del-reset);
+  color: #fff;
+  cursor: pointer;
 }
+
 .btn-big1 {
   width: 145px;
-  background: #f96c5b;
-  color: #fff;
   height: 50px;
   border-radius: 5px;
-  font-size: 20px;
+  border: none;
+  background: var(--equal);
+  color: #fff;
+  cursor: pointer;
 }

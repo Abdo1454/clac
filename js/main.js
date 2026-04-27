@@ -108,10 +108,30 @@ equal.addEventListener("click", calculate);
 
 
 // ************************ theme code **************************
-let themeOne=document.getElementById("theme-one");
-let themeTwo=document.getElementById("theme-two");
-let themeThree=document.getElementById("theme-three");
+const themeOne = document.getElementById("theme-one");
+const themeTwo = document.getElementById("theme-two");
+const themeThree = document.getElementById("theme-three");
 
-themeOne.addEventListener("click",()=>{
-  
-})
+const body = document.body;
+const active = document.getElementById("active");
+
+// helper function
+function setTheme(theme) {
+  body.classList.remove("theme-2", "theme-3");
+  active.classList.remove("move-2", "move-3");
+
+  if (theme === 2) {
+    body.classList.add("theme-2");
+    active.classList.add("move-2");
+  }
+
+  if (theme === 3) {
+    body.classList.add("theme-3");
+    active.classList.add("move-3");
+  }
+}
+
+// events
+themeOne.addEventListener("click", () => setTheme(1));
+themeTwo.addEventListener("click", () => setTheme(2));
+themeThree.addEventListener("click", () => setTheme(3));
