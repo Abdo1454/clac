@@ -1,4 +1,34 @@
-* {
+:root{
+    --bg: #3b4664;
+  --screen: #181f32;
+  --keys: hsl(224, 30%, 21%);
+  --text: #ffffff;
+  --main-btn: #eae3dc;
+  --equal: #f96c5b;
+  --del-reset: #9daedb;
+}
+
+/* Theme 2 */
+body.theme-2{
+      --bg: #e6e6e6;
+  --screen: #d3cdcd;
+  --keys: #e5e4e0;
+  --text: #36352d;
+  --main-btn: #36352d;
+  --equal: #fe8a37;
+  --del-reset: #62b5bd;
+}
+/* Theme 3 */
+body.theme-3{
+  --bg: hsl(268, 75%, 9%);
+  --screen: #1e0736;
+  --keys: #331c4d;
+  --text: #fceaff;
+  --main-btn: #6c34ac;
+  --equal: #fe8a37;
+  --del-reset: #62b5bd;
+}
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;

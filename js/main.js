@@ -105,3 +105,13 @@ dot.onclick = addDot;
 del.addEventListener("click", delLast);
 reset.addEventListener("click", clearAll);
 equal.addEventListener("click", calculate);
+
+
+// ************************ theme code **************************
+let themeOne=document.getElementById("theme-one");
+let themeTwo=document.getElementById("theme-two");
+let themeThree=document.getElementById("theme-three");
+
+themeOne.addEventListener("click",()=>{
+  
+})
