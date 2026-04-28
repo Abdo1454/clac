@@ -67,6 +67,9 @@ function calculate() {
 
     if (exp === "") return;
 
+    const isLastOperator = ["+", "-", "*", "/"].includes(exp.at(-1));
+    if (isLastOperator) return;
+
     // منع انتهاء بـ operator
     if (/[+\-*/.]$/.test(exp)) {
       input.value = "Error";
